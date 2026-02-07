@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF | NSI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="#" class="logo-link"><span class="logo-box">CTF</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#section-web">Web</a></li>
+            <li><a href="#section-crypto">Crypto</a></li>
+            <li><a href="#section-osint">OSINT</a></li>
+            <li><a href="#section-stegano">Stégano</a></li>
+            <li><a href="#section-reverse">Reverse</a></li>
+            <li><a href="#section-forensics">Forensics</a></li>
+        </ul>
+        <div class="score-container">
+            <i class="fas fa-terminal"></i> SCORE: <span id="user-points">0</span>
+            <i class="fas fa-redo-alt" id="reset-btn" title="Réinitialiser" onclick="resetProgress()" style="margin-left:15px; cursor:pointer; font-size:0.8rem; opacity:0.5;"></i>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="glitch" data-text="MISSION_DASHBOARD">MISSION_DASHBOARD</h1>
+        <p>Bonne chance :)</p>
+    </header>
+
+    <main class="container">
+        <section id="section-web" class="category-block">
+            <h2 class="category-title"><i class="fas fa-globe"></i> WEB EXPLOITATION</h2>
+            <div id="list-web" class="grid-challenges"></div>
+        </section>
+
+        <section id="section-crypto" class="category-block">
+            <h2 class="category-title"><i class="fas fa-key"></i> CRYPTOGRAPHY</h2>
+            <div id="list-crypto" class="grid-challenges"></div>
+        </section>
+
+        <section id="section-osint" class="category-block">
+            <h2 class="category-title"><i class="fas fa-map-marker-alt"></i> OSINT</h2>
+            <div id="list-osint" class="grid-challenges"></div>
+        </section>
+
+        <section id="section-stegano" class="category-block">
+            <h2 class="category-title"><i class="fas fa-image"></i> STÉGANOGRAPHIE</h2>
+            <div id="list-stegano" class="grid-challenges"></div>
+        </section>
+
+        <section id="section-reverse" class="category-block">
+            <h2 class="category-title"><i class="fas fa-microchip"></i> REVERSE ENGINEERING</h2>
+            <div id="list-reverse" class="grid-challenges"></div>
+        </section>
+
+        <section id="section-forensics" class="category-block">
+            <h2 class="category-title"><i class="fas fa-search"></i> FORENSICS</h2>
+            <div id="list-forensics" class="grid-challenges"></div>
+        </section>
+    </main>
+
+    <div id="challenge-sidebar" class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <span id="side-category" class="tag">CATÉGORIE</span>
+                <button class="btn-close" onclick="closeSidebar()"><i class="fas fa-times"></i></button>
+            </div>
+            <h2 id="side-title">Titre</h2>
+            <div id="side-diff" class="difficulty-label">Difficulté</div>
+            <div class="points-badge"><i class="fas fa-bolt"></i> <span id="side-points">0</span> POINTS</div>
+            <div class="description-box"><p id="side-desc">Description...</p></div>
+            <div class="submission-zone">
+                <input type="text" id="flag-input" placeholder="FLAG{...}">
+                <button id="submit-btn" onclick="checkFlag()">VALIDER</button>
+                <p id="feedback"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

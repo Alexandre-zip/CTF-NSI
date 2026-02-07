@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Se connecter à IDF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+    <div class="kc-login">
+        <div id="kc-header" class="kc-header-class">
+            <img src="https://auth.monlycee.net/resources/icoar/login/idf-theme-1.1.2-RC4/img/logo-idf-vertical.svg" class="kc-header-wrapper-logo" alt="Région île de france | mon lycée.net">
+        </div>
+
+        <div class="kc-form-card">
+            <div class="kc-form-card-wrapper">
+                <header class="kc-banner">
+                    <img src="https://auth.monlycee.net/resources/icoar/login/idf-theme-1.1.2-RC4/img/welcome-illu.svg" class="kc-header-wrapper-logo" alt="">
+                    <div>
+                        <h1 class="kc-login-account-title">Bienvenue dans votre<br>Espace Numérique de Travail.</h1>
+                        <p class="kc-login-account-sub-title">Connectez-vous pour accéder à votre compte.</p>
+                    </div>
+                </header>
+
+                <div id="kc-content">
+                    <div id="kc-content-wrapper">
+                        <div id="kc-form">
+                            <div id="kc-form-wrapper">
+                                <form id="kc-form-login" action="#" method="post">
+                                    <div class="kc-form-group">
+                                        <label for="username">Identifiant</label>
+                                        <div class="kc-input-group">
+                                            <input required autocomplete="off" tabindex="2" id="username" class="kc-input" name="username" type="text" autofocus oninput="this.value = this.value.toLowerCase()">
+                                        </div>
+                                    </div>
+
+                                    <div class="kc-form-group">
+                                        <label for="password">Mot de passe</label>
+                                        <div class="kc-input-group">
+                                            <input required autocomplete="off" tabindex="3" id="password" class="kc-input" name="password" type="password">
+                                            <button class="kc-form-password-visibility-button" type="button" aria-label="Afficher le mot de passe" aria-controls="password" data-password-toggle tabindex="4" data-icon-show="kc-form-password-visibility-icon-show" data-icon-hide="kc-form-password-visibility-icon-hide" data-label-show="Afficher le mot de passe" data-label-hide="Masquer le mot de passe">
+                                                <img class="kc-form-password-visibility-icon-show" aria-label="Afficher le mot de passe" />
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="kc-form-group kc-form-group-buttons">
+                                        <div id="kc-form-buttons" class="kc-form-group">
+                                            <button tabindex="7" class="kc-button" name="login" id="kc-login" type="submit">Se connecter</button>
+                                        </div>
+                                        <div class="kc-form-options-wrapper">
+                                            <span class="kc-form-options-span">
+                                                <a tabindex="6" href="error.html">Mot de passe oublié ?</a>
+                                                <a tabindex="6" href="error.html">Nom d'utilisateur oublié ?</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="footer-container">
+                <div class="footer-margin-div footer-inner">
+                    <h2><img src="https://auth.monlycee.net/resources/icoar/login/idf-theme-1.1.2-RC4/img/horizontal.svg" alt="Région île de France | Mon Lycée.net"></h2>
+                    <div>
+                        <p class="conseil">Conseil régional d'Île-de-France</p>
+                        <p>2, rue Simone Veil 93400 Saint-Ouen</p>
+                    </div>
+                </div>
+                <div class="footer-inner">
+                    <h2 class="h2-informations">Informations</h2>
+                    <ul>
+                        <li><a href="error.html">Accessibilité : non conforme</a></li>
+                        <li><a href="error.html">Charte d’utilisation</a></li>
+                        <li><a href="error.html">Mentions légales</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer-rights"><span>2024 </span><span>Région Île-de-France. Tous droits réservés.</span></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

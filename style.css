@@ -1,0 +1,95 @@
+:root {
+    --bg-dark: #05070a;
+    --bg-card: #0d1117;
+    --bg-sidebar: #12161d;
+    --bg-solved: #020406;
+    --accent: #00f2ff;
+    --accent-glow: rgba(0, 242, 255, 0.5);
+    --text-main: #e6edf3;
+    --text-dim: #8b949e;
+    --border: #30363d;
+    --very-easy: #00ffaa;
+    --easy: #2ea043;
+    --medium: #e3b341;
+    --hard: #f85149;
+}
+
+html { scroll-behavior: smooth; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION & LOGO */
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 5%; background: rgba(5, 7, 10, 0.9);
+    backdrop-filter: blur(10px); border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+}
+.logo-link { text-decoration: none; }
+.logo-box {
+    font-family: 'Orbitron', sans-serif; background: var(--accent);
+    color: var(--bg-dark); padding: 5px 15px; font-weight: 900;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); transition: 0.3s;
+    display: inline-block;
+}
+.logo-box:hover { box-shadow: 0 0 15px var(--accent); transform: scale(1.05); }
+
+.nav-links { display: flex; list-style: none; gap: 1.2rem; }
+.nav-links a { color: var(--text-dim); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; font-weight: 600; }
+.nav-links a:hover { color: var(--accent); }
+
+.score-container { color: var(--accent); font-family: 'Orbitron', sans-serif; border: 1px solid var(--accent); padding: 5px 15px; border-radius: 4px; }
+
+/* DASHBOARD */
+.hero { padding: 60px 5%; text-align: center; border-bottom: 1px solid var(--border); }
+.glitch { font-family: 'Orbitron', sans-serif; font-size: 2.5rem; color: var(--accent); }
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+.category-block { margin-bottom: 60px; scroll-margin-top: 100px; }
+.category-title { color: var(--text-dim); font-family: 'Orbitron', sans-serif; margin-bottom: 20px; font-size: 1rem; }
+
+.grid-challenges { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+
+.challenge-card { background: var(--bg-card); border: 1px solid var(--border); padding: 25px; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+.challenge-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+
+/* ÉTAT RÉUSSI (Sombre) */
+.challenge-card.solved { background: var(--bg-solved) !important; opacity: 0.4; cursor: default; pointer-events: none; filter: grayscale(1); }
+.challenge-card.solved h3::after { content: " \f058"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--very-easy); margin-left: 10px; }
+
+.card-diff { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; display: inline-block; padding: 2px 8px; border: 1px solid; border-radius: 3px; }
+
+/* SIDEBAR & BOUTONS TÉLÉCHARGEMENT */
+.sidebar { position: fixed; top: 0; right: -450px; width: 400px; height: 100%; background: var(--bg-sidebar); z-index: 1001; transition: 0.5s; border-left: 1px solid var(--border); }
+.sidebar.active { right: 0; }
+.sidebar-content { padding: 40px; display: flex; flex-direction: column; height: 100%; }
+.btn-close { background: none; border: none; color: var(--text-dim); font-size: 1.5rem; cursor: pointer; }
+.description-box { background: rgba(0,0,0,0.3); padding: 20px; border-radius: 8px; flex-grow: 1; border: 1px solid var(--border); margin: 20px 0; }
+
+.download-btn {
+    display: inline-block; margin-top: 15px; padding: 10px 15px; 
+    background: rgba(0, 242, 255, 0.1); color: var(--accent) !important; 
+    border: 1px solid var(--accent); text-decoration: none; border-radius: 4px; font-weight: bold;
+}
+.download-btn:hover { background: var(--accent); color: var(--bg-dark) !important; }
+
+.submission-zone input { width: 100%; padding: 12px; background: var(--bg-dark); border: 1px solid var(--border); color: white; margin-bottom: 10px; border-radius: 4px; }
+.submission-zone button { width: 100%; padding: 12px; background: var(--accent); color: var(--bg-dark); border: none; font-weight: 800; cursor: pointer; border-radius: 4px; }
+
+.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; display: none; }
+.overlay.active { display: block; }
+
+/* Difficultés */
+.v-easy { color: var(--very-easy); border-color: var(--very-easy); }
+.easy { color: var(--easy); border-color: var(--easy); }
+.medium { color: var(--medium); border-color: var(--medium); }
+.hard { color: var(--hard); border-color: var(--hard); }
+
+a {
+    color: #00f2ff;
+}
